@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+:root {
+  --background: #F5F3F0;
+  --foreground: #1A1A1A;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+
+  --color-terracota: #C1714F;
+  --color-terracota-dark: #8C4A2F;
+  --color-terracota-light: #FAF0EB;
+  --color-terracota-mid: #E8B89A;
+  --color-trilha-bg: #F5F3F0;
+  --color-trilha-text: #1A1A1A;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
