@@ -12,16 +12,169 @@ export default function Home() {
       </nav>
 
       {/* Hero */}
-      <section className="bg-terracota text-white px-6 py-24 flex flex-col items-center text-center gap-6">
-        <h1 className="text-4xl md:text-5xl font-bold max-w-3xl leading-tight">
-          O mercado de produto está mudando rápido. Sua carreira também precisa.
-        </h1>
-        <p className="text-lg md:text-xl max-w-xl text-terracota-light/90">
-          Aprenda o que importa, no tempo que você tem. Trilha entrega microconteúdo feito para gestores de produto que não param.
-        </p>
-        <button className="mt-2 px-8 py-4 rounded-full bg-white text-terracota-dark font-bold text-base hover:bg-terracota-light transition-colors shadow-md">
-          Monte sua trilha de carreira
-        </button>
+      <section className="relative overflow-hidden bg-terracota text-white w-full">
+        <div className="max-w-6xl mx-auto px-6 pt-16 pb-32 md:pt-24 flex flex-col md:flex-row items-center gap-10 md:gap-0 w-full">
+
+        {/* Left: text content */}
+        <div className="flex flex-col items-center text-center md:items-start md:text-left gap-6 md:w-1/2">
+          <h1 className="text-4xl md:text-5xl font-bold max-w-xl leading-tight">
+            O mercado de produto está mudando rápido. Sua carreira também precisa.
+          </h1>
+          <p className="text-lg md:text-xl max-w-md text-terracota-light/90">
+            Aprenda o que importa, no tempo que você tem. Trilha entrega microconteúdo feito para gestores de produto que não param.
+          </p>
+          <div className="flex justify-center md:justify-start w-full">
+            <button className="px-8 py-4 rounded-full bg-white text-terracota-dark font-bold text-base hover:bg-terracota-light transition-colors shadow-md">
+              Monte sua trilha de carreira
+            </button>
+          </div>
+        </div>
+
+        {/* Right: phone mockup */}
+        <div className="relative flex justify-center md:w-1/2" style={{ minHeight: 320 }}>
+        <div className="relative mt-6 w-full flex justify-center" style={{ maxWidth: 340 }}>
+
+          {/* Floating card — right side */}
+          <div
+            className="absolute z-10 bg-white rounded-xl p-[10px] flex flex-col gap-[6px] shadow-lg"
+            style={{
+              right: -20,
+              top: "50%",
+              transform: "translateY(-50%)",
+              width: 140,
+              border: "1px solid #E8B89A",
+              borderRadius: 12,
+            }}
+          >
+            <p style={{ fontSize: 10, color: "#9CA3AF" }}>Dia 4 de 30</p>
+            <p style={{ fontSize: 12, fontWeight: 600, color: "#1A1A1A", lineHeight: 1.3 }}>
+              Priorização com dados
+            </p>
+            {/* Progress bar */}
+            <div style={{ height: 4, borderRadius: 99, background: "#E8B89A", overflow: "hidden" }}>
+              <div style={{ width: "30%", height: "100%", background: "#C1714F", borderRadius: 99 }} />
+            </div>
+          </div>
+
+          {/* Phone container */}
+          <div
+            className="relative shadow-2xl"
+            style={{
+              width: 260,
+              borderRadius: 20,
+              overflow: "hidden",
+              boxShadow: "0 24px 48px rgba(0,0,0,0.25)",
+            }}
+          >
+            {/* Mockup header */}
+            <div style={{ background: "#C1714F", padding: "14px 14px 12px" }}>
+              <div className="flex items-center justify-between mb-2">
+                <span style={{ fontSize: 11, color: "rgba(255,255,255,0.85)" }}>
+                  Sua trilha · 30 dias
+                </span>
+                <span
+                  style={{
+                    fontSize: 11,
+                    color: "white",
+                    background: "rgba(255,255,255,0.2)",
+                    borderRadius: 99,
+                    padding: "2px 8px",
+                  }}
+                >
+                  🔥 7 dias
+                </span>
+              </div>
+              <p style={{ fontSize: 15, fontWeight: 500, color: "white", lineHeight: 1.3 }}>
+                PM de IA em 30 dias
+              </p>
+              <p style={{ fontSize: 11, color: "rgba(255,255,255,0.75)", marginTop: 2 }}>
+                Nível mid · 15 min por dia
+              </p>
+            </div>
+
+            {/* Mockup body */}
+            <div style={{ background: "white", padding: 12, display: "flex", flexDirection: "column", gap: 10 }}>
+              {/* Tag */}
+              <span
+                style={{
+                  display: "inline-block",
+                  fontSize: 10,
+                  fontWeight: 600,
+                  color: "#8C4A2F",
+                  background: "#FAF0EB",
+                  borderRadius: 99,
+                  padding: "3px 10px",
+                  alignSelf: "flex-start",
+                }}
+              >
+                📖 Fundamento
+              </span>
+
+              {/* Lesson title */}
+              <p style={{ fontSize: 13, fontWeight: 700, color: "#1A1A1A", lineHeight: 1.4 }}>
+                Pensamento probabilístico para PMs
+              </p>
+
+              {/* Quote box */}
+              <div
+                style={{
+                  borderLeft: "3px solid #C1714F",
+                  background: "#F5F3F0",
+                  borderRadius: "0 6px 6px 0",
+                  padding: "8px 10px",
+                  fontSize: 11,
+                  color: "#1A1A1A",
+                  lineHeight: 1.5,
+                }}
+              >
+                Seu trabalho é decidir qual taxa de acerto é boa o suficiente — e projetar para quando errar.
+              </div>
+
+              {/* Progress dots */}
+              <div className="flex gap-[6px] items-center">
+                {[0, 1, 2, 3].map((i) => (
+                  <div
+                    key={i}
+                    style={{
+                      width: 8,
+                      height: 8,
+                      borderRadius: "50%",
+                      background: i === 0 ? "#C1714F" : "#E8B89A",
+                    }}
+                  />
+                ))}
+              </div>
+
+              {/* CTA button */}
+              <button
+                style={{
+                  background: "#C1714F",
+                  color: "white",
+                  border: "none",
+                  borderRadius: 8,
+                  padding: "9px 0",
+                  fontSize: 12,
+                  fontWeight: 600,
+                  width: "100%",
+                  cursor: "pointer",
+                }}
+              >
+                Entendi, ver exemplo →
+              </button>
+            </div>
+          </div>
+        </div>
+        </div>{/* end right wrapper */}
+        </div>{/* end inner max-w container */}
+
+        {/* Base gradient */}
+        <div
+          className="absolute bottom-0 left-0 right-0 pointer-events-none"
+          style={{
+            height: 80,
+            background: "linear-gradient(to bottom, transparent, #F5F3F0)",
+          }}
+        />
       </section>
 
       {/* O Problema */}
